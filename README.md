@@ -66,6 +66,7 @@ This project is a simple web application that demonstrates a user authentication
     STRIPE_KEY=your_stripe_key
     STRIPE_SECRET=your_stripe_secret
     STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+    STRIPE_PRICE_ID=your_stripe_product_price_id
     ```
 
     Replace `your_stripe_key`, `your_stripe_secret`, and `your_stripe_webhook_secret` with your actual Stripe API keys and webhook secret.
