@@ -70,31 +70,32 @@ This project is a simple web application that demonstrates a user authentication
 
     Replace `your_stripe_key`, `your_stripe_secret`, and `your_stripe_webhook_secret` with your actual Stripe API keys and webhook secret.
 
-9. Run migrations to create database tables:
-
-    ```bash
-    php artisan migrate
-    ```
-
-10. Generate a JWT secret key for API authentication:
-
-    ```bash
-    php artisan jwt:secret
-    ```
-
-11. Set up the scheduler by adding the following Cron entry to your server. This will call the Laravel command scheduler every minute:
-
-    ```bash
-    php artisan schedule:work
-    ```
-12. Update the `APP_URL` for the React frontend in your `.env` file:
+9. Update the `APP_URL` for the React frontend in your `.env` file:
 
     ```env
     APP_URL=http://localhost:5173
     ```
 
     Ensure to restart your React development server after making this change.
-    
+
+10. Run migrations to create database tables:
+
+    ```bash
+    php artisan migrate
+    ```
+
+11. Generate a JWT secret key for API authentication:
+
+    ```bash
+    php artisan jwt:secret
+    ```
+
+12. Set up the scheduler by adding the following Cron entry to your server. This will call the Laravel command scheduler every minute:
+
+    ```bash
+    php artisan schedule:work
+    ```
+
 ## Usage
 
 1. Start the Laravel development server:
