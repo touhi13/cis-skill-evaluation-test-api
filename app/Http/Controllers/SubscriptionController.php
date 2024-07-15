@@ -18,17 +18,20 @@ class SubscriptionController extends Controller
     use ApiResponseTrait;
 
     protected $stripeService;
+    protected $stripePriceId;
 
     public function __construct(StripeService $stripeService)
     {
         $this->stripeService = $stripeService;
+        $this->stripePriceId = config('services.stripe.price_id');
+
     }
 
     public function createCheckoutSession(Request $request): JsonResponse
     {
         try {
             $user            = $request->user(); // Assuming you have authenticated user
-            $checkoutSession = $this->stripeService->createCheckoutSession('price_1PcTIzBl487OItYzZfEz80fB', $user);
+            $checkoutSession = $this->stripeService->createCheckoutSession($this->stripePriceId, $user);
 
             return response()->json([
                 'checkout_url' => $checkoutSession->url,
