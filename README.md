@@ -87,7 +87,14 @@ This project is a simple web application that demonstrates a user authentication
     ```bash
     php artisan schedule:work
     ```
+12. Update the `APP_URL` for the React frontend in your `.env` file:
 
+    ```env
+    APP_URL=http://localhost:5173
+    ```
+
+    Ensure to restart your React development server after making this change.
+    
 ## Usage
 
 1. Start the Laravel development server:
