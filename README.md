@@ -69,7 +69,7 @@ This project is a simple web application that demonstrates a user authentication
     STRIPE_PRICE_ID=your_stripe_product_price_id
     ```
 
-    Replace `your_stripe_key`, `your_stripe_secret`, and `your_stripe_webhook_secret` with your actual Stripe API keys and webhook secret.
+    Replace `your_stripe_key`, `your_stripe_secret`, `your_stripe_webhook_secret`, and `your_stripe_product_price_id` with your actual Stripe API keys and webhook secret.
 
 9. Update the `APP_URL` for the React frontend in your `.env` file:
 
